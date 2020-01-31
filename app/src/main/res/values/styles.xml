@@ -5,22 +5,28 @@
 		<item name="colorPrimary">@color/colorPrimary</item>
 		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 		<item name="colorAccent">@color/colorAccent</item>
+		<item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.LargeComponent</item>
+		<item name="bottomSheetStyle">@style/Widget.BottomSheet</item>
+		<item name="materialCardViewStyle">@style/Widget.CardView</item>
 	</style>
 
-	<style name="BottomSheetCardView" parent="@style/Widget.MaterialComponents.CardView">
-		<item name="cardPreventCornerOverlap">false</item>
-		<item name="cardBackgroundColor">@color/colorAccent</item>
-		<item name="shapeAppearanceOverlay">
-			@style/ShapeAppearanceOverlay.MaterialCardView.BottomSheet
-		</item>
-	</style>
-
-	<style name="ShapeAppearanceOverlay.MaterialCardView.BottomSheet" parent="">
+	<style name="ShapeAppearance.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
 		<item name="cornerFamily">rounded</item>
-		<item name="cornerSizeTopRight">16dp</item>
-		<item name="cornerSizeTopLeft">16dp</item>
-		<item name="cornerSizeBottomRight">0dp</item>
-		<item name="cornerSizeBottomLeft">0dp</item>
+		<item name="cornerSize">16dp</item>
+	</style>
+
+	<style name="ShapeAppearance.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSize">16dp</item>
+	</style>
+
+	<style name="Widget.BottomSheet" parent="@style/Widget.MaterialComponents.BottomSheet">
+		<item name="backgroundTint">?attr/colorAccent</item>
+	</style>
+
+	<style name="Widget.CardView" parent="@style/Widget.MaterialComponents.CardView">
+		<item name="cardPreventCornerOverlap">false</item>
+		<item name="cardBackgroundColor">?attr/colorAccent</item>
 	</style>
 
 </resources>
