@@ -7,15 +7,15 @@
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:background="@color/colorPrimary" />
+		android:background="?attr/colorPrimary" />
 
-	<com.google.android.material.card.MaterialCardView
-		style="@style/BottomSheetCardView"
+	<FrameLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		app:behavior_hideable="false"
 		app:behavior_peekHeight="96dp"
-		app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+		app:layout_behavior="@string/bottom_sheet_behavior"
+		style="?attr/bottomSheetStyle">
 
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
@@ -43,7 +43,6 @@
 
 			<com.google.android.material.card.MaterialCardView
 				android:id="@+id/inner_mcv"
-				style="@style/BottomSheetCardView"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_margin="16dp"
@@ -76,7 +75,7 @@
 					android:id="@+id/four"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
-					android:background="@color/colorPrimaryDark"
+					android:background="?attr/colorPrimaryDark"
 					android:padding="16dp"
 					android:text="This MaterialCardView is clipping the Textview that has a coloured background"
 					android:textColor="@android:color/white" />
@@ -85,7 +84,6 @@
 
 			<com.google.android.material.card.MaterialCardView
 				android:id="@+id/inner_mcv_3"
-				style="@style/BottomSheetCardView"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_margin="16dp"
@@ -98,7 +96,7 @@
 					android:id="@+id/five"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
-					android:background="@color/colorPrimaryDark"
+					android:background="?attr/colorPrimaryDark"
 					android:padding="16dp"
 					android:text="This MaterialCardView is NOT clipping the Textview that has a coloured background. NOtice the rounded corners are gone even tho they should be visible. The difference here is that the rounded corners com from the shapeAppearanceOverlay. Is that expected?"
 					android:textColor="@android:color/white" />
@@ -107,7 +105,7 @@
 
 		</androidx.constraintlayout.widget.ConstraintLayout>
 
-	</com.google.android.material.card.MaterialCardView>
+	</FrameLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
